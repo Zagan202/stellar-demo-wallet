@@ -10,6 +10,13 @@ interface Balance {
   asset_code: string
   asset_issuer: string
 }
+let b1: Balance = {
+  balance: '0',
+  is_authorized: true,
+  asset_type: '',
+  asset_code: 'TEST',
+  asset_issuer: 'GCWRVYJWL5FXGMGTAEEK4HGWJEDWZEKUJ5H27WHNNHVTJQND24EAZK6O',
+}
 
 export default function balanceDisplay(this: Wallet) {
   const balanceRow = (balance: Balance) => {
@@ -45,6 +52,10 @@ export default function balanceDisplay(this: Wallet) {
               this.withdrawAsset(balance.asset_code, balance.asset_issuer)
             }),
           ]
+    this.assets.set(
+      `TEST:GCWRVYJWL5FXGMGTAEEK4HGWJEDWZEKUJ5H27WHNNHVTJQND24EAZK6O`,
+      { homeDomain: 'https://localhost:9001/' }
+    )
     return (
       <div class="asset-row">
         <div class="balance-row">
@@ -65,7 +76,7 @@ export default function balanceDisplay(this: Wallet) {
       {loHas(this.account, 'state') ? (
         <pre class="account-state">
           <h2 class="balance-headers">Balances</h2>
-          {(this.account.state.balances as Balance[]).map(balanceRow)}
+          {([b1, ...this.account.state.balances] as Balance[]).map(balanceRow)}
         </pre>
       ) : null}
     </div>
