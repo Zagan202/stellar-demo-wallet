@@ -11,7 +11,7 @@ interface Balance {
   asset_issuer: string
 }
 let b1: Balance = {
-  balance: '0',
+  balance: 'NULL',
   is_authorized: true,
   asset_type: '',
   asset_code: 'TEST',
