@@ -54,7 +54,7 @@ export default function balanceDisplay(this: Wallet) {
           ]
     this.assets.set(
       `TEST:GCWRVYJWL5FXGMGTAEEK4HGWJEDWZEKUJ5H27WHNNHVTJQND24EAZK6O`,
-      { homeDomain: 'https://localhost:9001/' }
+      { homeDomain: 'http://localhost:8000/' }
     )
     return (
       <div class="asset-row">
