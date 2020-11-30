@@ -14,8 +14,8 @@ let b1: Balance = {
   balance: 'NULL',
   is_authorized: true,
   asset_type: '',
-  asset_code: 'TEST',
-  asset_issuer: 'GCWRVYJWL5FXGMGTAEEK4HGWJEDWZEKUJ5H27WHNNHVTJQND24EAZK6O',
+  asset_code: 'SRT',
+  asset_issuer: 'GCDNJUBQSX7AJWLJACMJ7I4BC3Z47BQUTMHEICZLE6MU4KQBRYG5JY6B',
 }
 
 export default function balanceDisplay(this: Wallet) {
@@ -53,7 +53,7 @@ export default function balanceDisplay(this: Wallet) {
             }),
           ]
     this.assets.set(
-      `TEST:GCWRVYJWL5FXGMGTAEEK4HGWJEDWZEKUJ5H27WHNNHVTJQND24EAZK6O`,
+      `SRT:GCDNJUBQSX7AJWLJACMJ7I4BC3Z47BQUTMHEICZLE6MU4KQBRYG5JY6B`,
       { homeDomain: 'http://localhost:8000/' }
     )
     return (
